@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    // target 表示所生成的 JavaScript 代码需要兼容什么版本的运行环境，此处设为 "ESNext"，表示仅兼容最新的运行环境
+    "target": "ESNext",
+
+    // useDefineForClassFields 表示是否使用 ECMAScript 中的类字段定义语法，此处设为 true，表示使用该语法
+    "useDefineForClassFields": true,
+
+    // module 表示使用的模块系统，此处设为 "ESNext"，表示使用最新的 ECMAScript 模块系统
+    "module": "ESNext",
+
+    // 当解析代码中的 import 时，按照 Node.js 的方式解析（即从 node_modules 中查找）
+    "moduleResolution": "Node",
+
+    // strict 表示是否启用所有严格类型检查选项（例如不能把 null 赋值给 number 类型变量等）
+    // 正常项目都必须开启，如果不开启，那你就别用 TypeScript 了
+    "strict": true,
+
+    // jsx 表示使用的 JSX 处理器，此处设为 "preserve"，表示保留 JSX 代码不进行转换
+    "jsx": "preserve",
+
+    // resolveJsonModule 表示是否允许导入 JSON 模块，此处设为 true，表示允许导入 JSON 模块
+    "resolveJsonModule": true,
+
+    // isolatedModules 表示是否将每个文件视为独立的模块，此处设为 true，表示将每个文件视为独立的模块
+    "isolatedModules": true,
+
+    // esModuleInterop 表示是否启用 ES 模块之间的互操作性，此处设为 true，表示启用互操作性
+    "esModuleInterop": true,
+
+    // lib 表示 TypeScript 文件中可以使用哪些内置函数，此处设为 ["ESNext", "DOM", "DOM.Iterable"]，
+    // 表示最新版 JavaScript 的内置函数（parseInt 等）和浏览器的 DOM API（document.getElementById 等）都能用
+    "lib": [
+      "ESNext",
+      "DOM",
+
+      // 注意，如果不加 DOM.Iterable 就没法使用 for...of 语法遍历 DOM 元素
+      "DOM.Iterable"
+    ],
+    // skipLibCheck 表示是否跳过对引用的库文件的类型检查，此处设为 true，表示跳过检查
+    "skipLibCheck": true,
+
+    // noEmit 表示是否生成编译后的 JavaScript 代码，此处设为 true，表示不生成代码
+    "noEmit": true
+  },
+
+  // 项目中需要编译的文件列表
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+
+  // 设置一些 Node.js 特有的选项
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
