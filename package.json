@@ -12,6 +12,7 @@
     "vite": "^4.2.1"
   },
   "devDependencies": {
+    "vue-router": "^4.1.6",
     "pinia": "^2.0.33",
     "@vitejs/plugin-vue": "^4.1.0",
     "element-plus": "^2.3.1",
