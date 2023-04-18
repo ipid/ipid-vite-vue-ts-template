@@ -1,7 +1,11 @@
-import { defineStore } from 'pinia'
+import { reactive } from 'vue'
 
-export const useIndexStore = defineStore('index', {
-  state: () => ({
-    count: 0,
-  }),
+const store = reactive({
+  count: 0,
 })
+
+export function countAdd1() {
+  store.count++
+}
+
+export default store
