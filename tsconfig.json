@@ -41,7 +41,11 @@
     "skipLibCheck": true,
 
     // noEmit 表示是否生成编译后的 JavaScript 代码，此处设为 true，表示不生成代码
-    "noEmit": true
+    "noEmit": true,
+
+    // 开启装饰器功能，方便使用 class-validator、class-transformer 等
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
 
   // 项目中需要编译的文件列表

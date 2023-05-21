@@ -1,9 +1,9 @@
 <h1 align="center">我的 Vue 项目</h1>
-<p align="center"><i>基于 Vue 3 + TypeScript + Element Plus + SCSS + Pinia 的 Vue 单页应用。</i></p>
+<p align="center"><i>基于 Vue 3 + TypeScript + Element Plus + SCSS 的 Vue 单页应用。</i></p>
 
 ## 📖 项目说明
 
-🌏 自带 Vue 3 + TypeScript + Element Plus + SCSS + Pinia 支持。
+🌏 自带 Vue 3 + TypeScript + Element Plus + SCSS 支持。
 
 👍 模板里每一行代码都有用！绝对不放入无用的代码。
 
@@ -30,20 +30,20 @@ pnpm install
 - 使用 `dev` 命令运行临时 Web 开发服务器：
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
 - 使用 `build` 命令将代码编译为静态 HTML、CSS 和 JS 文件：
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 - 在完成编译后，若想在本地启动一个预览服务器，来预览编译好的 HTML 文件，可使用 `preview` 命令：
 
 ```bash
-# 必须在 pnpm run build 之后才能使用
-pnpm run preview
+# 必须在 pnpm build 之后才能使用
+pnpm preview
 ```
 
 <br>
