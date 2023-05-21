@@ -11,9 +11,8 @@
 
 ## 💼 搭建开发环境
 
-- 安装 Node.js 的 LTS 版。Windows 用户请[前往官网下载](https://nodejs.org/zh-cn/download)，macOS 和 Linux
-  用户请使用 [nvm](https://github.com/nvm-sh/nvm) 安装。
-
+- 安装 Node.js 的 LTS 版。Windows 用户请[前往官网下载](https://nodejs.org/zh-cn/download)，macOS 和 Linux 用户请使用 [nvm](https://github.com/nvm-sh/nvm) 安装。
+  
 - 本项目只提供 pnpm 的 lock file，所以<b>强烈建议</b>安装 pnpm：
 
 ```bash
@@ -60,6 +59,4 @@ pnpm preview
 
 ## 💡 关于 IDE 智能提示
 
-WebStorm 用户可以直接打开项目进行开发。VSCode
-用户可以使用 [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
-插件来帮助开发。
+WebStorm 用户可以直接打开项目进行开发。VSCode 用户可以使用 [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) 插件来帮助开发。
