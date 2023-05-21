@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  VITE_ENV_NAME: string
+  VITE_ENV_ALL_LOADED: string
 }
