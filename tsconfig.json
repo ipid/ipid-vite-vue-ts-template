@@ -49,7 +49,7 @@
     // 设置路径别名，这样 import 的时候就可以用 @ 开头来表示 src 目录。
     // 在 vite.config.ts 中需要同步配置 resolve.alias
     "paths": {
-      "@/*": [ "src/*" ]
+      "@/*": [ "./src/*" ]
     },
 
     // 设置 baseUrl，因为 paths 需要这个设置
