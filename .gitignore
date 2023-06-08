@@ -33,3 +33,6 @@ dist-ssr
 *.gz
 *.bz2
 *.xz
+
+# TypeScript 编译文件
+tsconfig.tsbuildinfo
