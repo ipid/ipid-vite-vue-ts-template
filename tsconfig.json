@@ -13,7 +13,6 @@
     "moduleResolution": "Node",
 
     // strict 表示是否启用所有严格类型检查选项（例如不能把 null 赋值给 number 类型变量等）
-    // 正常项目都必须开启，如果不开启，那你就别用 TypeScript 了
     "strict": true,
 
     // jsx 表示使用的 JSX 处理器，此处设为 "preserve"，表示保留 JSX 代码不进行转换
@@ -53,8 +52,20 @@
       "@/*": [ "src/*" ]
     },
 
-    // 设置 baseUrl，其实没啥用，但 paths 需要这个设置
-    "baseUrl": "./"
+    // 设置 baseUrl，因为 paths 需要这个设置
+    "baseUrl": "./",
+
+    // 支持增量编译
+    "incremental": true,
+
+    // 禁止 switch case 不 break
+    "noFallthroughCasesInSwitch": true,
+
+    // import 里的大小写必须正确
+    "forceConsistentCasingInFileNames": true,
+
+    // 关闭构造函数必须给每一个字段赋初值的限制，便于使用 class-validator、class-transformer 等
+    "strictPropertyInitialization": false
   },
 
   // 项目中需要编译的文件列表

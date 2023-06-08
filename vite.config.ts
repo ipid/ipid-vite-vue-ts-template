@@ -20,6 +20,9 @@ export default defineConfig({
     }),
   ],
 
+  // 不限制部署路径
+  base: './',
+
   resolve: {
     alias: {
       // 配置别名，这样就能在 import 的时候使用 @ 表示 src 目录。
