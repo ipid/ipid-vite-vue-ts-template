@@ -10,11 +10,15 @@
     "moduleResolution": "Node",
 
     // 允许从没有默认导出的模块中默认导入
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+
+    // 开启所有严格的类型检查
+    "strict": true
   },
 
+  // 设置 baseUrl，供 include 使用
+  "baseUrl": "./",
+
   // 包含的文件
-  "include": [
-    "vite.config.ts"
-  ]
+  "include": ["vite.config.ts", ".eslintrc.cjs"]
 }

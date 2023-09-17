@@ -36,27 +36,24 @@
       // 注意，如果不加 DOM.Iterable 就没法使用 for...of 语法遍历 DOM 元素
       "DOM.Iterable"
     ],
-    // skipLibCheck 表示是否跳过对引用的库文件的类型检查，此处设为 true，表示跳过检查
+    // skipLibCheck 表示是否不检查 node_modules，此处设为 true，表示跳过检查
     "skipLibCheck": true,
 
     // noEmit 表示是否生成编译后的 JavaScript 代码，此处设为 true，表示不生成代码
     "noEmit": true,
 
-    // 开启装饰器功能，方便使用 class-validator、class-transformer 等
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    // 关闭装饰器功能，避免引入运行时 polyfill
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
 
     // 设置路径别名，这样 import 的时候就可以用 @ 开头来表示 src 目录。
     // 在 vite.config.ts 中需要同步配置 resolve.alias
     "paths": {
-      "@/*": [ "./src/*" ]
+      "@/*": ["./src/*"]
     },
 
     // 设置 baseUrl，因为 paths 需要这个设置
     "baseUrl": "./",
-
-    // 支持增量编译
-    "incremental": true,
 
     // 禁止 switch case 不 break
     "noFallthroughCasesInSwitch": true,
@@ -64,22 +61,13 @@
     // import 里的大小写必须正确
     "forceConsistentCasingInFileNames": true,
 
-    // 关闭构造函数必须给每一个字段赋初值的限制，便于使用 class-validator、class-transformer 等
-    "strictPropertyInitialization": false
+    // 如果是
+    "verbatimModuleSyntax": true
   },
 
   // 项目中需要编译的文件列表
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
 
-  // 设置一些 Node.js 特有的选项
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  // 防止 ESLint 检查
+  "exclude": ["node_modules", "dist"]
 }

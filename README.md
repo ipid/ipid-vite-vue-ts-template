@@ -12,7 +12,6 @@
 ## 💼 搭建开发环境
 
 - 安装 Node.js 的 LTS 版。Windows 用户请[前往官网下载](https://nodejs.org/zh-cn/download)，macOS 和 Linux 用户请使用 [nvm](https://github.com/nvm-sh/nvm) 安装。
-  
 - 本项目只提供 pnpm 的 lock file，所以<b>强烈建议</b>安装 pnpm：
 
 ```bash
