@@ -55,6 +55,18 @@ pnpm preview
 
 <br>
 
+## 🛠️格式化代码并检查 TypeScript 错误
+
+如果你想在提交之前格式化代码、检查 TypeScript 类型定义是否正确，或者修改了 ESLint、Stylelint 等配置之后想要格式化存量代码，可以运行以下命令：
+
+```shell
+pnpm lint:all
+```
+
+这条命令会检测所有格式、类型问题，并尝试修复，如果修复不成功会输出错误。
+
+<br>
+
 ## ⚖️ 版权相关
 
 本项目按照 MIT 协议授权发布，具体内容请参考 [LICENSE](LICENSE) 文件。

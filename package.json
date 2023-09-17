@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc && vite build",
+    "build": "npm run lint:all && vite build",
     "preview": "vite preview --host",
     "prepare": "husky install",
-    "lint": "lint-staged"
+    "lint:staged": "lint-staged",
+    "lint:all": "vue-tsc && eslint --fix . && stylelint --fix '**/*.{scss,vue,html}' && prettier --write ."
   },
   "dependencies": {
     "@types/node": "20.6.2",
