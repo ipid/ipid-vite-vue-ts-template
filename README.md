@@ -13,8 +13,7 @@
 - 自带 Vue 3 + TypeScript + Element Plus + SCSS 支持。
 - 配置了 Husky + Lint-Staged + ESLint + Stylelint + Prettier，且支持 TypeScript 和 TSX，保证代码风格统一。
 - 强制锁定 Node.js 和 pnpm 版本，防止「锁定文件（lock file）」被忽略或反复修改。
-
-- 模板里每一行代码都有用！绝对不放入无用的代码。
+- 模板里的东西几乎都是必要的！你不需要删掉很多东西就能着手开发。
 
 <br>
 

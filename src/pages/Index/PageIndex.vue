@@ -15,11 +15,7 @@ function globalPlus1() {
 }
 
 function SimpleComponent(props: { onClick: (...args: unknown[]) => unknown }) {
-  return (
-    <ElButton onClick={props.onClick}>
-      目前局部值：{localNum.value} ←+1
-    </ElButton>
-  )
+  return <ElButton onClick={props.onClick}>目前局部值：{localNum.value} ←+1</ElButton>
 }
 </script>
 
