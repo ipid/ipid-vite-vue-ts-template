@@ -27,6 +27,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/no-import-type-side-effects': 'error',
     'vue/define-emits-declaration': 'error',
     'vue/define-props-declaration': 'error',
   },

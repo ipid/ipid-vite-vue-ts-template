@@ -61,7 +61,7 @@
     // import 里的大小写必须正确
     "forceConsistentCasingInFileNames": true,
 
-    // 如果是
+    // 设为 true 后，如果是 import type 就删掉，如果是普通 import 就留着
     "verbatimModuleSyntax": true
   },
 
