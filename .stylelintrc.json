@@ -3,5 +3,8 @@
     "stylelint-config-recommended-scss",
     "stylelint-config-html",
     "stylelint-config-recommended-vue"
-  ]
+  ],
+  "rules": {
+    "scss/selector-no-union-class-name": true
+  }
 }
