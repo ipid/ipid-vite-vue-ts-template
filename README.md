@@ -19,11 +19,11 @@
 
 ## 💼 搭建开发环境
 
-- 安装 Node.js v20.6.1 版本。Windows 用户请[前往官网下载](https://nodejs.org/zh-cn/download)，macOS 和 Linux 用户请使用 [nvm](https://github.com/nvm-sh/nvm) 安装。
-- 本项目只能使用 pnpm 来开发，所以开发前需安装 pnpm 8.7.5 版本：
+- 安装 Node.js 最新的 LTS 版本。Windows 用户请[前往官网下载](https://nodejs.org/zh-cn/download)，macOS 和 Linux 用户请使用 [nvm](https://github.com/nvm-sh/nvm) 安装。
+- 本项目只能使用 pnpm 来开发，所以开发前需安装 pnpm：
 
 ```bash
-npm i -g pnpm@8.7.5
+npm i -g pnpm
 ```
 
 - 进入到项目目录中，并使用 `pnpm i` 安装依赖包：
