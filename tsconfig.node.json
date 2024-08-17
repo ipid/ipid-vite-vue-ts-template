@@ -1,24 +1,21 @@
 {
+  "extends": "@tsconfig/node-lts/tsconfig.json",
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*",
+    "./*.cjs"
+  ],
   "compilerOptions": {
-    // 允许本文件出现在其它文件的 references 里
     "composite": true,
+    "noEmit": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
 
-    // 生成符合最新 ECMAScript 规范的模块
     "module": "ESNext",
-
-    // 当解析代码中的 import 时，按照 Node.js 的方式解析（即从 node_modules 中查找）
-    "moduleResolution": "Node",
-
-    // 允许从没有默认导出的模块中默认导入
-    "allowSyntheticDefaultImports": true,
-
-    // 开启所有严格的类型检查
-    "strict": true
-  },
-
-  // 设置 baseUrl，供 include 使用
-  "baseUrl": "./",
-
-  // 包含的文件
-  "include": ["vite.config.ts", ".eslintrc.cjs"]
+    "moduleResolution": "Bundler",
+    "types": ["node"]
+  }
 }
