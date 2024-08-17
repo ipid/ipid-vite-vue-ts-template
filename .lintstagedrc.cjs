@@ -5,5 +5,5 @@ module.exports = {
   '*.{json,yaml,yml,md}': ['prettier --check'],
   '*.{ts,tsx,vue}': () => 'vue-tsc --project tsconfig.json',
   '*.scss': ['stylelint --fix', 'prettier --write'],
-  '*.{css,less,stylus}': ['禁止编写纯CSS、Less或Stylus，请将文件重命名为.scss。'],
+  '*.{sass,css,less,stylus}': ['禁止编写纯CSS、SASS、Less或Stylus，请将文件重命名为.scss。'],
 }

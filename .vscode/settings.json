@@ -7,13 +7,14 @@
   "css.format.enable": false,
   "less.format.enable": false,
   "scss.format.enable": false,
-  "auto-close-tag.disableOnLanguage": ["typescript", "json"],
   "stylelint.validate": ["css", "scss", "vue", "html"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.detectIndentation": false,
-  "editor.indentSize": 2
+  "editor.indentSize": 2,
+  "eslint.codeActionsOnSave.mode": "problems",
+  "prettier.endOfLine": "lf"
 }
