@@ -1,20 +1,29 @@
 {
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*, .env*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, .stylelint*, .postcss*, .lintstaged*, .npmrc",
+    "README.md": "LICENSE"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
   "editor.formatOnSave": true,
   "typescript.format.enable": false,
   "javascript.format.enable": false,
   "json.format.enable": false,
   "html.format.enable": false,
   "css.format.enable": false,
-  "less.format.enable": false,
   "scss.format.enable": false,
-  "stylelint.validate": ["css", "scss", "vue", "html"],
+  // 此处暂时把 "vue" 去掉，因为 Stylelint 插件有 bug
+  "stylelint.validate": ["css", "scss", "html"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
-  },
+  "eslint.format.enable": false,
   "editor.detectIndentation": false,
   "editor.indentSize": 2,
   "eslint.codeActionsOnSave.mode": "problems",
-  "prettier.endOfLine": "lf"
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

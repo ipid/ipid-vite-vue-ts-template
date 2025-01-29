@@ -14,16 +14,29 @@ function globalPlus1() {
   indexStore.count++
 }
 
-function SimpleComponent(props: { onClick: (...args: unknown[]) => unknown }) {
+function SimpleComponent(props: { onClick: () => void }) {
   return <ElButton onClick={props.onClick}>目前局部值：{localNum.value} ←+1</ElButton>
 }
 </script>
 
 <template>
-  <SimpleComponent @click="localPlus1" />
-  <p>
-    全局 count: {{ indexStore.count }}
-    <el-button @click="globalPlus1()">Local +1</el-button>
-  </p>
-  <p>当前环境：{{ environmentName }}</p>
+  <div class="page-index__container">
+    <SimpleComponent @click="localPlus1" />
+    <p>
+      全局 count: {{ indexStore.count }}
+      <ElButton @click="globalPlus1()">Local +1</ElButton>
+    </p>
+    <p>当前环境：{{ environmentName }}</p>
+  </div>
 </template>
+
+<style lang="scss" scoped>
+@use './PageIndex.scss' as PageIndex;
+
+.page-index__container {
+  @include PageIndex.pad20px;
+  width: fit-content;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+}
+</style>

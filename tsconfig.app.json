@@ -1,23 +1,15 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["src/env.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": [],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "composite": true,
-    "lib": ["ESNext", "DOM", "DOM.AsyncIterable", "DOM.Iterable"],
-    "incremental": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "isolatedModules": true,
 
-    "baseUrl": ".",
     "paths": {
+      // 需要与 vite.config.ts 中的 resolve - alias 配置保持一致
       "@/*": ["./src/*"]
-    },
-
-    // 关闭装饰器功能，避免引入运行时 polyfill
-    "experimentalDecorators": false,
-    "emitDecoratorMetadata": false,
-
-    // 禁止 switch case 不 break
-    "noFallthroughCasesInSwitch": true
+    }
   }
 }
