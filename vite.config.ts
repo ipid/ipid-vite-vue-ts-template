@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueDevTools from 'vite-plugin-vue-devtools'
 import ElementPlus from 'unplugin-element-plus/vite'
 
 /** @see https://vite.dev/config/ */
@@ -12,7 +11,6 @@ export default defineConfig({
     // 支持 .vue 组件 + JSX 语法
     vue(),
     vueJsx(),
-    vueDevTools(),
 
     // 支持在 import { El** } 时自动插入 import 语句，以引入对应的 CSS 文件
     ElementPlus({

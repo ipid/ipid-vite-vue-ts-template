@@ -20,7 +20,7 @@ function SimpleComponent(props: { onClick: () => void }) {
 </script>
 
 <template>
-  <div class="page-index__container">
+  <div :class="$style.container">
     <SimpleComponent @click="localPlus1" />
     <p>
       全局 count: {{ indexStore.count }}
@@ -30,10 +30,10 @@ function SimpleComponent(props: { onClick: () => void }) {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 @use './PageIndex.scss' as PageIndex;
 
-.page-index__container {
+.container {
   @include PageIndex.pad20px;
   width: fit-content;
   border: 1px solid #e1e1e1;

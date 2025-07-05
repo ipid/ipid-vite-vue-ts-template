@@ -4,7 +4,8 @@
     "tsconfig.json": "tsconfig.*.json, env.d.ts",
     "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*, .env*",
     "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, .stylelint*, .postcss*, .lintstaged*, .npmrc",
-    "README.md": "LICENSE"
+    "README.md": "LICENSE",
+    ".gitignore": ".gitattributes"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
@@ -16,14 +17,11 @@
   "html.format.enable": false,
   "css.format.enable": false,
   "scss.format.enable": false,
-  // 此处暂时把 "vue" 去掉，因为 Stylelint 插件有 bug
-  "stylelint.validate": ["css", "scss", "html"],
+  "stylelint.validate": ["css", "scss", "html", "vue"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.format.enable": false,
   "editor.detectIndentation": false,
   "editor.indentSize": 2,
   "eslint.codeActionsOnSave.mode": "problems",
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "stylelint.packageManager": "pnpm"
 }
