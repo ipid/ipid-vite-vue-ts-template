@@ -16,7 +16,7 @@
     "lint": "run-p lint:*",
     "do-lint-staged": "lint-staged",
     "format": "prettier --write ./",
-    "test": "vitest"
+    "test": "vitest --coverage.enabled=false"
   },
   "dependencies": {
     "element-plus": "2.10.3",

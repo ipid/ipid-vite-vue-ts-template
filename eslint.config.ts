@@ -22,8 +22,9 @@ export default defineConfigWithVueTs(
   vueTsConfigs.stylisticTypeChecked,
 
   {
+    // Vitest 测试文件相关文件专属规则
     ...pluginVitest.configs.recommended,
-    files: ['src/**/__tests__/*'],
+    files: ['src/**/__tests__/*', '**/*.{test,spec}.?(c|m)[jt]s?(x)'],
   },
 
   skipFormatting,
@@ -44,6 +45,7 @@ export default defineConfigWithVueTs(
       'vue/v-on-event-hyphenation': ['error', 'never', { autofix: true }],
       'vue/no-restricted-class': [
         'error',
+        // Class 名必须使用 BEM 规范，这里将不符合 BEM 规范的类名报错
         String.raw`/^(?![a-z0-9]+(-[a-z0-9]+)*__[a-z0-9]+(-[a-z0-9]+)*(--[a-z0-9]+(-[a-z0-9]+)*)?$)/`,
       ],
       'vue/block-lang': [

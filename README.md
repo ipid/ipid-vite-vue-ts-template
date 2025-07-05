@@ -58,18 +58,32 @@ pnpm preview
 如果你想在提交之前格式化代码、检查 TypeScript 类型定义是否正确，或者修改了 ESLint、Stylelint 等配置之后想要格式化存量代码，可以运行以下命令：
 
 ```shell
+# 一条命令检查所有问题
 pnpm lint
+
+# 仅检查和修复 ESLint 问题
+pnpm lint:eslint
+
+# 仅检查和修复 Stylelint 问题
+pnpm lint:stylelint
 ```
 
-这条命令会检测所有格式、类型问题，并尝试修复，如果修复不成功会输出错误。
+这些命令会检测所有代码风格问题，并尝试修复，如果修复不成功会输出错误。
 
 <br>
 
 ## 🧪 尝试执行代码片段
 
-你可以在 playground 文件夹中放入想要尝试执行的代码片段。
+你可以在 `playground` 文件夹中放入想要尝试执行的代码片段。
 
-建议使用 TypeScript，编写后使用 `tsx playground/xx.ts` 即可在 Node 环境中运行。
+建议使用 TypeScript 并额外地在全局安装 tsx，编写代码片段后，使用 `tsx <文件名>` 即可在 Node 环境中运行。例如：
+
+```shell
+# 如果还没有安装 tsx，需要额外安装。本项目默认不提供 tsx。
+# npm i -g tsx
+
+tsx playground/test.ts
+```
 
 <br>
 
@@ -80,7 +94,11 @@ pnpm lint
 想运行单测时，你可以在 VSCode 里安装 Vitest 插件，也可以执行如下命令：
 
 ```shell
-npx vitest <留空表示全部运行，有内容表示运行指定的单测文件>
+# 运行所有单测，并进入监听模式
+pnpm test
+
+# 给 vitest 传递额外的参数，例如下面的例子为用 Chrome DevTools 来调试单元测试（从而调试业务代码）的命令
+pnpm test --inspect-brk --browser --no-file-parallelism src/pages/Index/index-store.test.ts
 ```
 
 <br>

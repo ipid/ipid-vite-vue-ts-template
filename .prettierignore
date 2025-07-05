@@ -1,2 +1,22 @@
+# 编译产物
+/dist
+/dist-ssr
+/dist-static
+
+# 依赖
+/node_modules
+
+# 缓存和日志
+/.idea
+/.vite
+/coverage
+/temp
+/logs
+
+# 锁文件
+package-lock.json
+yarn.lock
 pnpm-lock.yaml
-node_modules
+
+# TypeScript 编译文件
+tsconfig.tsbuildinfo

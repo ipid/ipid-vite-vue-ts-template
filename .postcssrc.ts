@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
+import autoprefixer from 'autoprefixer'
 
-module.exports = {
-  plugins: [require('autoprefixer')],
+export default {
+  plugins: [autoprefixer],
 }
